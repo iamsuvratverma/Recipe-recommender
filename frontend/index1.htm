@@ -1,0 +1,219 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Recipe Recommender</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    input, button { padding: 8px; margin: 5px 0; width: 300px; }
+    button { cursor: pointer; }
+    .recipe { border: 1px solid #ccc; padding: 10px; margin: 10px 0; }
+    .match-score { color: green; font-weight: bold; }
+    .soft-filter { color: gray; font-size: 0.9em; }
+    .instructions { margin-left: 15px; }
+    .substitutions { color: #d2691e; margin-left: 15px; }
+    .rank { font-weight: bold; color: blue; }
+  </style>
+</head>
+<body>
+  <h1>Recipe Recommender</h1>
+
+  <label>Pantry items (comma separated):</label><br>
+  <input type="text" id="pantry" placeholder="e.g., chickpeas, tomato, garam masala"><br>
+
+  <label>Diet:</label><br>
+  <input type="text" id="diet" placeholder="vegan, vegetarian, gluten-free, non-vegetarian"><br>
+
+  <label>Cuisine:</label><br>
+  <input type="text" id="cuisine" placeholder="indian, italian, etc."><br>
+
+  <label>Max time (minutes):</label><br>
+  <input type="number" id="time"><br>
+
+  <label>Servings required:</label><br>
+  <input type="number" id="servings"><br>
+
+  <button onclick="getRecipes()">Get Recipes</button>
+
+  <h2>Top Recipes:</h2>
+  <div id="results"></div>
+
+  <script>
+    async function getRecipes() {
+      const pantry = document.getElementById("pantry").value.split(",").map(i => i.trim());
+      const diet = document.getElementById("diet").value.trim();
+      const cuisine = document.getElementById("cuisine").value.trim();
+      const time_available = document.getElementById("time").value;
+      const servings_required = document.getElementById("servings").value;
+
+      const requestData = {
+        pantry_items: pantry,
+        diet: diet || null,
+        cuisine: cuisine || null,
+        time_available: time_available ? parseInt(time_available) : null,
+        servings_required: servings_required ? parseInt(servings_required) : null
+      };
+
+      try {
+        const response = await fetch("http://127.0.0.1:8000/recommend-recipes", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(requestData)
+        });
+
+        const data = await response.json();
+        const resultsDiv = document.getElementById("results");
+        resultsDiv.innerHTML = "";
+
+        if (!Array.isArray(data) || data.length === 0) {
+          resultsDiv.innerHTML = "<p>No recipes found for this match.</p>";
+          return;
+        }
+
+        data.forEach(r => {
+          const div = document.createElement("div");
+          div.className = "recipe";
+
+          // LLM info
+          const llm = r.llm || {};
+          const rank = llm.rank || "N/A";
+          const instructions = llm.instructions || [];
+          const substitutions = llm.substitutions || [];
+
+          div.innerHTML = `
+            <strong>${r.name}</strong> <span class="match-score">(Ingredients matched: ${r.match_score})</span><br>
+            Rank: <span class="rank">${rank}</span><br>
+            Ingredients: ${r.ingredients}<br>
+            Tags: ${r.tags}<br>
+            Time: ${r.time_minutes} min ${r.time_ok ? '' : '(exceeds max)'}<br>
+            Servings: ${r.servings} ${r.servings_ok ? '' : '(less than required)'}<br>
+            Cuisine: ${r.cuisine_ok ? '✔' : '❌'}<br>
+            ${substitutions.length > 0 ? `<div class="substitutions">Substitutions: ${substitutions.join(", ")}</div>` : ''}
+            ${instructions.length > 0 ? `<div class="instructions"><strong>Instructions:</strong><ol>${instructions.map(step => `<li>${step}</li>`).join('')}</ol></div>` : ''}
+          `;
+          resultsDiv.appendChild(div);
+        });
+
+      } catch (err) {
+        console.error(err);
+        alert("Error fetching recipes. Check console.");
+      }
+    }
+  </script>
+</body>
+</html> -->
+
+
+<!-- new code strts here -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Recipe Recommender</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    input, button { padding: 8px; margin: 5px 0; width: 300px; }
+    button { cursor: pointer; }
+    .recipe { border: 1px solid #ccc; padding: 10px; margin: 10px 0; }
+    .match-score { color: green; font-weight: bold; }
+    .note { color: #d2691e; font-style: italic; margin: 10px 0; }
+    .instructions { margin-left: 15px; }
+    .rank { font-weight: bold; color: blue; }
+  </style>
+</head>
+<body>
+  <h1>Recipe Recommender</h1>
+
+  <label>Pantry items (comma separated):</label><br>
+  <input type="text" id="pantry" placeholder="e.g., chickpeas, tomato, garam masala"><br>
+
+  <label>Diet:</label><br>
+  <input type="text" id="diet" placeholder="vegan, vegetarian, gluten-free, non-vegetarian"><br>
+
+  <label>Cuisine:</label><br>
+  <input type="text" id="cuisine" placeholder="indian, italian, etc."><br>
+
+  <label>Max time (minutes):</label><br>
+  <input type="number" id="time"><br>
+
+  <label>Servings required:</label><br>
+  <input type="number" id="servings"><br>
+
+  <button onclick="getRecipes()">Get Recipes</button>
+
+  <h2>Top Recipes:</h2>
+  <div id="note" class="note"></div>
+  <div id="results"></div>
+
+  <script>
+    async function getRecipes() {
+      const pantry = document.getElementById("pantry").value.split(",").map(i => i.trim()).filter(i => i);
+      const diet = document.getElementById("diet").value.trim();
+      const cuisine = document.getElementById("cuisine").value.trim();
+      const time_available = document.getElementById("time").value;
+      const servings_required = document.getElementById("servings").value;
+
+      const requestData = {
+        pantry_items: pantry,
+        diet: diet || null,
+        cuisine: cuisine || null,
+        time_available: time_available ? parseInt(time_available) : null,
+        servings_required: servings_required ? parseInt(servings_required) : null
+      };
+
+      const resultsDiv = document.getElementById("results");
+      const noteDiv = document.getElementById("note");
+      resultsDiv.innerHTML = "";
+      noteDiv.innerHTML = "";
+
+      try {
+        const response = await fetch("http://127.0.0.1:8000/recommend-recipes", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(requestData)
+        });
+
+        const data = await response.json();
+
+        // Show API message if exists
+        if (data.message) {
+          noteDiv.innerHTML = data.message;
+          return;
+        }
+
+        // Show note if optional fields missing
+        if (data.note) {
+          noteDiv.innerHTML = data.note;
+        }
+
+        // If no recipes found
+        if (!data.recipes || data.recipes.length === 0) {
+          resultsDiv.innerHTML = "<p>No recipes found for these matches. Try with different inputs.</p>";
+          return;
+        }
+
+        // Render recipes
+        data.recipes.forEach(r => {
+          const div = document.createElement("div");
+          div.className = "recipe";
+          div.innerHTML = `
+            <strong>${r.name}</strong> 
+            <span class="match-score">(Ingredients matched: ${r.match_score})</span><br>
+            Rank: <span class="rank">${r.rank}</span><br>
+            Ingredients: ${r.ingredients}<br>
+            Tags: ${r.tags}<br>
+            Time: ${r.time_minutes} min<br>
+            Servings: ${r.servings}<br>
+            ${r.instructions.length > 0 ? `<div class="instructions"><strong>Instructions:</strong><ol>${r.instructions.map(step => `<li>${step}</li>`).join('')}</ol></div>` : ''}
+          `;
+          resultsDiv.appendChild(div);
+        });
+
+      } catch (err) {
+        console.error(err);
+        alert("Error fetching recipes. Check console.");
+      }
+    }
+  </script>
+</body>
+</html>

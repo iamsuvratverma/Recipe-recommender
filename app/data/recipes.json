@@ -1,0 +1,322 @@
+[
+  {
+    "id": "r-1",
+    "name": "Spiced Chickpea Curry",
+    "ingredients": ["chickpeas", "onion", "tomato", "garam masala", "coriander", "garlic"],
+    "tags": ["vegan", "indian", "curry", "gluten-free"],
+    "time_required": 60,
+    "servings": 4
+  },
+  {
+    "id": "r-2",
+    "name": "Paneer Butter Masala",
+    "ingredients": ["paneer", "tomato", "onion", "cream", "garam masala", "butter"],
+    "tags": ["vegetarian", "indian", "curry"],
+    "time_required": 25,
+    "servings": 4
+  },
+  {
+    "id": "r-3",
+    "name": "Classic Tomato Pasta",
+    "ingredients": ["pasta", "tomato", "olive oil", "garlic", "basil", "oregano"],
+    "tags": ["vegetarian", "italian", "main-course"],
+    "time_required": 15,
+    "servings": 2
+  },
+  {
+    "id": "r-4",
+    "name": "Garlic Butter Chicken",
+    "ingredients": ["chicken", "garlic", "butter", "pepper", "parsley"],
+    "tags": ["non-vegetarian", "indian", "main-course"],
+    "time_required": 40,
+    "servings": 4
+  },
+  {
+    "id": "r-5",
+    "name": "Vegetable Stir Fry",
+    "ingredients": ["broccoli", "bell pepper", "carrot", "soy sauce", "garlic", "olive oil"],
+    "tags": ["vegan", "asian", "quick"],
+    "time_required": 15,  
+    "servings": 2
+  },
+  {
+    "id": "r-6",
+    "name": "Lentil Soup",
+    "ingredients": ["lentils", "onion", "garlic", "carrot", "celery", "vegetable broth"],
+    "tags": ["vegan", "gluten-free", "healthy", "soup"],
+    "time_required": 30,
+    "servings": 4
+  },
+  {
+    "id": "r-7",
+    "name": "Oats Porridge",
+    "ingredients": ["oats", "milk", "honey", "cinnamon", "banana"],
+    "tags": ["vegetarian", "breakfast", "healthy"],
+    "time_required": 10,
+    "servings": 2
+  },
+  {
+    "id": "r-8",
+    "name": "Greek Salad",
+    "ingredients": ["cucumber", "tomato", "olive", "feta cheese", "olive oil", "oregano"],
+    "tags": ["vegetarian", "mediterranean", "salad", "gluten-free"],
+    "time_required": 10,
+    "servings": 2
+  },
+  {
+    "id": "r-9",
+    "name": "Quinoa Bowl",
+    "ingredients": ["quinoa", "chickpeas", "avocado", "spinach", "lemon", "olive oil"],
+    "tags": ["vegan", "gluten-free", "healthy", "main-course"],
+    "time_required": 20,
+    "servings": 2
+  },
+  {
+    "id": "r-10",
+    "name": "Aloo Paratha",
+    "ingredients": ["wheat flour", "potato", "cumin", "salt", "ghee"],
+    "tags": ["vegetarian", "indian", "breakfast"],
+    "time_required": 25,
+    "servings": 3
+  },
+  {
+    "id": "r-11",
+    "name": "Mushroom Risotto",
+    "ingredients": ["rice", "mushroom", "parmesan", "butter", "onion", "garlic", "vegetable broth"],
+    "tags": ["vegetarian", "italian", "main-course"],
+    "time_required": 40,
+    "servings": 3
+  },
+  {
+    "id": "r-12",
+    "name": "Pancakes",
+    "ingredients": ["flour", "milk", "egg", "baking powder", "sugar", "butter"],
+    "tags": ["vegetarian", "breakfast", "quick"],
+    "time_required": 15,
+    "servings": 2
+  },
+  {
+    "id": "r-13",
+    "name": "Masoor Dal",
+    "ingredients": ["masoor dal", "onion", "tomato", "garlic", "cumin", "turmeric"],
+    "tags": ["vegan", "indian", "gluten-free", "main-course"],
+    "time_required": 30,
+    "servings": 3
+  },
+  {
+    "id": "r-14",
+    "name": "Chana Masala",
+    "ingredients": ["chickpeas", "onion", "tomato", "garam masala", "ginger", "garlic"],
+    "tags": ["vegan", "indian", "curry", "gluten-free"],
+    "time_required": 40,
+    "servings": 4
+  },
+  {
+    "id": "r-15",
+    "name": "Egg Fried Rice",
+    "ingredients": ["rice", "egg", "carrot", "peas", "soy sauce", "onion"],
+    "tags": ["vegetarian", "asian", "quick"],
+    "time_required": 20,
+    "servings": 2
+  },
+  {
+    "id": "r-16",
+    "name": "Sambar",
+    "ingredients": ["toor dal", "tamarind", "turmeric", "vegetables", "curry leaves"],
+    "tags": ["vegan", "indian", "gluten-free", "main-course"],
+    "time_required": 50,
+    "servings": 4
+  },
+  {
+    "id": "r-17",
+    "name": "Idli",
+    "ingredients": ["rice", "urad dal", "fenugreek seeds", "salt"],
+    "tags": ["vegan", "indian", "breakfast", "gluten-free"],
+    "time_required": 60,
+    "servings": 4
+  },
+  {
+    "id": "r-18",
+    "name": "Veg Biryani",
+    "ingredients": ["basmati rice", "vegetables", "yogurt", "spices", "onion"],
+    "tags": ["vegetarian", "indian", "main-course"],
+    "time_required": 45,
+    "servings": 4
+  },
+  {
+    "id": "r-19",
+    "name": "Roasted Potatoes",
+    "ingredients": ["potato", "olive oil", "rosemary", "salt", "pepper"],
+    "tags": ["vegan", "snack", "gluten-free"],
+    "time_required": 35,
+    "servings": 4
+  },
+  {
+    "id": "r-20",
+    "name": "Chocolate Mug Cake",
+    "ingredients": ["flour", "cocoa powder", "sugar", "milk", "butter", "egg"],
+    "tags": ["vegetarian", "dessert", "quick"],
+    "time_required": 10,
+    "servings": 1
+  },
+  {
+    "id": "r-21",
+    "name": "Caesar Salad",
+    "ingredients": ["lettuce", "parmesan", "croutons", "olive oil", "lemon", "chicken optional"],
+    "tags": ["vegetarian", "salad", "quick"],
+    "time_required": 15,
+    "servings": 2
+  },
+  {
+    "id": "r-22",
+    "name": "Tuna Sandwich",
+    "ingredients": ["bread", "tuna", "mayonnaise", "lettuce", "tomato", "cheese optional"],
+    "tags": ["non-vegetarian", "quick", "snack"],
+    "time_required": 10,
+    "servings": 2
+  },
+  {
+    "id": "r-23",
+    "name": "Avocado Toast",
+    "ingredients": ["bread", "avocado", "olive oil", "salt", "pepper", "lemon juice"],
+    "tags": ["vegan", "breakfast", "quick"],
+    "time_required": 10,
+    "servings": 1
+  },
+  {
+    "id": "r-24",
+    "name": "Veggie Omelette",
+    "ingredients": ["egg", "bell pepper", "onion", "tomato", "spinach", "cheese optional"],
+    "tags": ["vegetarian", "breakfast", "quick"],
+    "time_required": 15,
+    "servings": 2
+  },
+  {
+    "id": "r-25",
+    "name": "French Toast",
+    "ingredients": ["bread", "egg", "milk", "sugar", "cinnamon", "butter"],
+    "tags": ["vegetarian", "breakfast", "dessert"],
+    "time_required": 15,
+    "servings": 2
+  },
+  {
+    "id": "r-26",
+    "name": "Tom Yum Soup",
+    "ingredients": ["mushroom", "lemongrass", "lime", "chili", "vegetable broth", "soy sauce"],
+    "tags": ["vegan", "thai", "soup", "gluten-free"],
+    "time_required": 30,
+    "servings": 3
+  },
+  {
+    "id": "r-27",
+    "name": "Pad Thai",
+    "ingredients": ["rice noodles", "tofu", "peanuts", "bean sprouts", "tamari", "lime"],
+    "tags": ["vegan", "thai", "main-course"],
+    "time_required": 25,
+    "servings": 2
+  },
+  {
+    "id": "r-28",
+    "name": "Beef Stew",
+    "ingredients": ["beef", "carrot", "potato", "onion", "celery", "garlic", "beef broth"],
+    "tags": ["non-vegetarian", "main-course", "hearty"],
+    "time_required": 120,
+    "servings": 4
+  },
+  {
+    "id": "r-29",
+    "name": "Fish Curry",
+    "ingredients": ["fish", "coconut milk", "onion", "tomato", "spices"],
+    "tags": ["non-vegetarian", "indian", "curry"],
+    "time_required": 45,
+    "servings": 4
+  },
+  {
+    "id": "r-30",
+    "name": "Kadhi",
+    "ingredients": ["yogurt", "gram flour", "turmeric", "curry leaves", "spices"],
+    "tags": ["vegetarian", "indian", "curry", "gluten-free"],
+    "time_required": 35,
+    "servings": 4
+  },
+  {
+    "id": "r-31",
+    "name": "Palak Paneer",
+    "ingredients": ["spinach", "paneer", "garlic", "onion", "tomato", "spices"],
+    "tags": ["vegetarian", "indian", "main-course", "gluten-free"],
+    "time_required": 30,
+    "servings": 4
+  },
+  {
+    "id": "r-32",
+    "name": "Methi Thepla",
+    "ingredients": ["wheat flour", "fenugreek leaves", "yogurt", "spices", "salt"],
+    "tags": ["vegetarian", "indian", "breakfast"],
+    "time_required": 20,
+    "servings": 2
+  },
+  {
+    "id": "r-33",
+    "name": "Bhindi Masala",
+    "ingredients": ["okra", "onion", "tomato", "spices", "garlic"],
+    "tags": ["vegan", "indian", "main-course", "gluten-free"],
+    "time_required": 25,
+    "servings": 2
+  },
+  {
+    "id": "r-34",
+    "name": "Rajma",
+    "ingredients": ["kidney beans", "onion", "tomato", "garam masala", "ginger", "garlic"],
+    "tags": ["vegan", "indian", "main-course", "gluten-free"],
+    "time_required": 40,
+    "servings": 4
+  },
+  {
+    "id": "r-35",
+    "name": "Black Bean Tacos",
+    "ingredients": ["black beans", "tortilla", "lettuce", "tomato", "avocado", "salsa"],
+    "tags": ["vegan", "mexican", "quick"],
+    "time_required": 20,
+    "servings": 3
+  },
+  {
+    "id": "r-36",
+    "name": "Shakshuka",
+    "ingredients": ["egg", "tomato", "bell pepper", "onion", "spices", "olive oil"],
+    "tags": ["vegetarian", "mediterranean", "breakfast"],
+    "time_required": 30,
+    "servings": 2
+  },
+  {
+    "id": "r-37",
+    "name": "Smoothie Bowl",
+    "ingredients": ["banana", "strawberry", "blueberry", "oats", "almond milk", "honey"],
+    "tags": ["vegetarian", "breakfast", "healthy", "quick"],
+    "time_required": 10,
+    "servings": 1
+  },
+  {
+    "id": "r-38",
+    "name": "Cucumber Raita",
+    "ingredients": ["cucumber", "yogurt", "cumin", "salt", "cilantro"],
+    "tags": ["vegetarian", "indian", "side-dish", "gluten-free"],
+    "time_required": 10,
+    "servings": 2
+  },
+  {
+    "id": "r-39",
+    "name": "Spinach Soup",
+    "ingredients": ["spinach", "onion", "garlic", "vegetable broth", "olive oil", "salt"],
+    "tags": ["vegan", "gluten-free", "healthy", "soup"],
+    "time_required": 20,
+    "servings": 2
+  },
+  {
+    "id": "r-40",
+    "name": "Veggie Burger",
+    "ingredients": ["burger bun", "veggie patty", "lettuce", "tomato", "cheese optional", "ketchup"],
+    "tags": ["vegetarian", "quick", "snack"],
+    "time_required": 15,
+    "servings": 2
+  }
+]
