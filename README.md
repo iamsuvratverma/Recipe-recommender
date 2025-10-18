@@ -218,8 +218,10 @@ curl -X GET http://localhost:8000/health
 
 ---
 
-## Screenshots
-Added in project documentation folder.
+## working Screenshots
+<img width="1348" height="640" alt="Screenshot 2025-10-17 225005" src="https://github.com/user-attachments/assets/f37d6ea1-fcae-4873-ac1f-c27ee777ed41" />
+<img width="1340" height="641" alt="Screenshot 2025-10-17 224909" src="https://github.com/user-attachments/assets/27171ce0-fb7d-4b22-be84-c3e7e130d6d9" />
+
 
 ---
 
